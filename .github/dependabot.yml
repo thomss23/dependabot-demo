@@ -4,11 +4,6 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    groups:
-      libraries:
-        patterns:
-          - "com.google.guava:guava"
-          - "org.apache.commons:commons-lang3"
-      spring:
-        patterns:
-          - "org.springframework.boot:spring-boot-starter-parent"
+    ignore:
+      - dependency-name: "org.springframework.boot:spring-boot-starter-parent"
+        update-types: ["version-update:semver-major"]
